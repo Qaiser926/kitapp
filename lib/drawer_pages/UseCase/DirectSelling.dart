@@ -88,7 +88,200 @@ class _directSellingPageState extends State<directSellingPage> {
 
       key: _scaffoldKey,
       
-      
+      body:ListView(
+        children: [
+
+            Padding(
+              padding: const EdgeInsets.only(top:60,left: 20,right: 20),
+              child: textField("Be successful selling products from home",
+                  20, FontWeight.w600, Colors.black),
+            ),
+            _main_buton("Get a Demo", 15, (){}, FontWeight.w700),
+            //1st Image Container
+            Container(
+              child: Image.asset("photo/dspic1.PNG"),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            textField("Get an increase in sales, recruiting, and brand recognition by combining the power of social media with "
+                "tried-and-true direct sales methods and CommentSold’s automation tools.",
+                15, FontWeight.normal, Colors.black45),
+            SizedBox(
+              height: 100,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: textField("Build community, connection, & sales",
+                  20, FontWeight.w600, Colors.black),
+            ),
+            textField("CommentSold automates your social commerce,"
+                " so you can focus on making your next big move to the top.",
+                15, FontWeight.normal, Colors.black45),
+
+            //drop down list is remining here,
+
+        SizedBox(
+          height: 60,
+        ),
+
+
+            // Container(
+            //   child: Image.asset("photo/ds2.PNG"),
+            // ),
+
+            Container(
+              color: Colors.blue,
+              width: double.infinity,
+              child: Column(
+                children: [
+                  textField("Wow your tribe", 30, FontWeight.bold, Colors.white),
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: textField("Direct sales companies require you to forge customer connections while growing sales. Fully focus on creating buzz and expanding your social selling empire, while "
+                        "CommentSold carries out the task of "
+                        "invoicing and inventory management.",
+                        15, FontWeight.normal, Colors.white),
+                  ),
+                  _main_buton("Schedule a Call", 15, (){}, FontWeight.w600),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  //1st Image Container
+
+
+
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            Container(
+              child: Image.asset("photo/dspic3.PNG"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            textField("Automate all of your invoicing", 20, FontWeight.w600, Colors.black),
+            SizedBox(
+              height: 30,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: textField("Save over 40 hours per week by"
+                  "never sending another manual invoice.",
+                  15, FontWeight.w600, Colors.black),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+
+            Container(
+              child: Image.asset("photo/dspic4.PNG"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: textField("Sell everywhere with one inventory",
+                  20, FontWeight.bold, Colors.black),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: textField("Sync all of your selling channels "
+                  "to a single, centralized inventory – updated in real-time.",
+                  15, FontWeight.normal, Colors.black),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+
+            Container(
+              child: Image.asset("photo/dspic5.PNG"),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            textField("Gamify to set yourself apart", 20, FontWeight.w600, Colors.black),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: textField("Make your brand memorable & create addicting "
+                  "shopping experiences with comment competition", 15, FontWeight.normal, Colors.black),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: textField("Get the latest in social marketing"
+                  " & sales strategies to grow your direct selling business", 20, FontWeight.normal, Colors.black),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                height: 60,
+                width: double.infinity,
+                color: Colors.orange,
+                child:
+                Center(
+                  child: Text("Subscrib",style: TextStyle(
+                    fontSize: 20,color: Colors.white
+                  ),),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 80,
+            ),
+            // Container(
+            //   child: Image.asset("photo/dspic6.PNG"),
+            // ),
+            Container(
+              color: Color(0xFFFFF7F7),
+              child: Column(
+                children: [
+                  Image.asset("photo/dspic6.PNG"),
+                  textField("“Solved my inventory issues with comment selling. Grew my sales and took less time than invoicing! We love the automated invoicing, waitlist features, "
+                      "FB messenger integration and of course the Support Team!”",
+                      30, FontWeight.bold, Colors.black),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  textField("Jason Scott", 13, FontWeight.normal, Colors.grey),
+                  SizedBox(height: 15,),
+                  textField("DEEP SOUTH POUT", 14, FontWeight.normal, Colors.black),
+                  SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+
+            ),
+
+            //after this same to home page
+
+
+        ],
+      ),
       
     drawer: Drawer(
           // child: SingleChildScrollView(
@@ -266,5 +459,37 @@ class _directSellingPageState extends State<directSellingPage> {
          insightBlogPage(),
         ]),
   ];
+ Widget textField(
+      String title,
+      double size,
+      FontWeight bold,
+      Color color,
+      ) {
+    return Text(title,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: size,
+            color: color,
+            fontWeight: bold,
+            height: 1.2,
+            letterSpacing: 0.7));
 
+  }
+  Padding _main_buton(
+      String title,
+      double size,
+      Function function,
+      FontWeight fontWeight,
+      ) {
+    return Padding(
+      padding: const EdgeInsets.all(14.0),
+      child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+              primary: CScolor.titlebackgroundColor,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+              textStyle: TextStyle(fontSize: size, fontWeight: fontWeight)),
+          onPressed: () {},
+          child: Text(title)),
+    );
+  }
 }

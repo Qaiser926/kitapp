@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.try_commented_sold">
    <application
-        android:label="try_commented_sold"
+        android:label="Eki"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

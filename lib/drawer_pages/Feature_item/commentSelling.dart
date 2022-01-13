@@ -26,8 +26,6 @@ import 'package:try_commented_sold/drawer_pages/UseCase/womenSelling.dart';
 import 'package:try_commented_sold/expandableList/dataList.dart';
 import 'package:try_commented_sold/expandableList/model/advanced_tile.dart';
 import 'package:try_commented_sold/theme/color.dart';
-import 'package:try_commented_sold/theme/text.dart';
-
 
 class commentSellingPage extends StatefulWidget {
   @override
@@ -36,7 +34,6 @@ class commentSellingPage extends StatefulWidget {
 
 class _commentSellingPageState extends State<commentSellingPage> {
   GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
-  
 
   int activeState = 0;
   final imageListt = [
@@ -50,7 +47,7 @@ class _commentSellingPageState extends State<commentSellingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
         centerTitle: true,
         iconTheme: IconThemeData(color: CScolor.titlebackgroundColor),
         toolbarHeight: 60,
@@ -104,9 +101,7 @@ class _commentSellingPageState extends State<commentSellingPage> {
             }),
         automaticallyImplyLeading: false,
       ),
-
       key: _scaffoldKey,
-      
       body: ListView(
         children: [
           Expanded(
@@ -124,12 +119,7 @@ class _commentSellingPageState extends State<commentSellingPage> {
                   _main_buton('Get a Demo', 15, () {}, FontWeight.bold),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                        color: Colors.amber.withOpacity(0.5),
-                        height: 300,
-                        child: Center(
-                            child: Text('Video ',
-                                style: TextStyle(color: Colors.white)))),
+                    child: Image.asset('photo/icon.jpeg'),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -252,7 +242,7 @@ class _commentSellingPageState extends State<commentSellingPage> {
             height: MediaQuery.of(context).size.height * 0.3,
             child: ExpandableList(),
           )),
-
+// key feature
           Padding(
             padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
             child: Column(
@@ -423,147 +413,151 @@ class _commentSellingPageState extends State<commentSellingPage> {
               ],
             ),
           ),
-          Container(
-            height: 900,
-            width: double.infinity,
-            color: Colors.orange,
-            child: Column(
-              children: [
-                Center(
-                  child: Padding(
+          // form container
+          Expanded(
+            child: Container(
+              // height: 900,
+              width: double.infinity,
+              color: Colors.orange,
+              child: Column(
+                children: [
+                  Center(
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(left: 40, right: 40, top: 60),
+                      child: Text(
+                        "Free Download: Complete Guid to Live Sales",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 23,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                  Padding(
                     padding:
-                        const EdgeInsets.only(left: 40, right: 40, top: 60),
+                        const EdgeInsets.only(top: 8.0, right: 20, left: 20),
                     child: Text(
-                      "Free Download: Complete Guid to Live Sales",
+                      "Dominate the competition with a "
+                      "solid strategy for utilizing the most powerful Facebook selling tool.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 23,
-                          fontWeight: FontWeight.w500),
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                        letterSpacing: 1,
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0, right: 20, left: 20),
-                  child: Text(
-                    "Dominate the competition with a "
-                    "solid strategy for utilizing the most powerful Facebook selling tool.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 13,
-                      letterSpacing: 1,
-                    ),
-                  ),
-                ),
-                // form container
-                Expanded(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: 20, right: 10, left: 10),
-                    child: Container(
-                      // height: 700,
-                      width: double.infinity,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 30, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "First name",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Last name",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Email",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Company name",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Phone number",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 20, left: 8),
-                                child: Align(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text(
-                                    "Select Your Estimated Total Monthly Sales",
-                                  ),
-                                ),
-                              ),
-                              textfield(),
-                              SizedBox(
-                                height: 25,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 40,
-                                  color: Colors.amber,
-                                  child: Center(
+                  // form container
+                  Expanded(
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(top: 20, right: 10, left: 10),
+                      child: Container(
+                        // height: 700,
+                        width: double.infinity,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 30, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
                                     child: Text(
-                                      "Download Now",
-                                      style: TextStyle(color: Colors.white),
+                                      "First name",
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              )
-                            ],
+                                textfield(),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Last name",
+                                    ),
+                                  ),
+                                ),
+                                textfield(),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Email",
+                                    ),
+                                  ),
+                                ),
+                                textfield(),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Company name",
+                                    ),
+                                  ),
+                                ),
+                                textfield(),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Phone number",
+                                    ),
+                                  ),
+                                ),
+                                textfield(),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 8),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      "Select Your Estimated Total Monthly Sales",
+                                    ),
+                                  ),
+                                ),
+                                textfield(),
+                                SizedBox(
+                                  height: 25,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 40,
+                                    color: Colors.amber,
+                                    child: Center(
+                                      child: Text(
+                                        "Download Now",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
 
@@ -1053,85 +1047,82 @@ class _commentSellingPageState extends State<commentSellingPage> {
           ),
         ],
       ),
-   
-    drawer: Drawer(
-          // child: SingleChildScrollView(
-          //   child: Column(
-          //     children: [
-          //       MyDrawerList(),
-          //     ],
-          //   ),
-          // ),
-          child: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.9,
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-                  child: ListView(
-                    physics: NeverScrollableScrollPhysics(),
-                    children: [
-                      // Expendable list view
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.8,
-                        width: double.infinity,
-                        child: ListView.builder(
-                          itemCount: vehicles.length,
-                          itemBuilder: (context, i) {
-                            return InkWell(
-                              onTap: () {},
-                              child: Container(
-                                margin: const EdgeInsets.only(top: 10),
-                                child: ExpansionTile(
-                                  title: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      InkWell(
-                                        child: Text(
-                                          vehicles[i].title,
-                                          style: const TextStyle(
-                                              fontSize: 15.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Color(0xff022C43)),
-                                        ),
+      drawer: Drawer(
+        // child: SingleChildScrollView(
+        //   child: Column(
+        //     children: [
+        //       MyDrawerList(),
+        //     ],
+        //   ),
+        // ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.9,
+              child: Container(
+                width: double.infinity,
+                height: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                child: ListView(
+                  physics: NeverScrollableScrollPhysics(),
+                  children: [
+                    // Expendable list view
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.8,
+                      width: double.infinity,
+                      child: ListView.builder(
+                        itemCount: vehicles.length,
+                        itemBuilder: (context, i) {
+                          return InkWell(
+                            onTap: () {},
+                            child: Container(
+                              margin: const EdgeInsets.only(top: 10),
+                              child: ExpansionTile(
+                                title: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    InkWell(
+                                      child: Text(
+                                        vehicles[i].title,
+                                        style: const TextStyle(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xff022C43)),
                                       ),
-                                    ],
-                                  ),
-                                  children: <Widget>[
-                                    Column(
-                                      children:
-                                          // _buildExpandableContent(vehicles[i]),
-                                          _buildExpandableContent(vehicles[i],
-                                              context, vehicles[i].title),
                                     ),
                                   ],
                                 ),
+                                children: <Widget>[
+                                  Column(
+                                    children:
+                                        // _buildExpandableContent(vehicles[i]),
+                                        _buildExpandableContent(vehicles[i],
+                                            context, vehicles[i].title),
+                                  ),
+                                ],
                               ),
-                            );
-                          },
-                        ),
+                            ),
+                          );
+                        },
                       ),
+                    ),
 
-                      Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 1.5,
-                                  color: CScolor.titlebackgroundColor)),
-                          child: MaterialButton(
-                            onPressed: () {},
-                            child: Text('Log In'),
-                          )),
-                    ],
-                  ),
+                    Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 1.5,
+                                color: CScolor.titlebackgroundColor)),
+                        child: MaterialButton(
+                          onPressed: () {},
+                          child: Text('Log In'),
+                        )),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-
+      ),
     );
   }
 
@@ -1142,7 +1133,6 @@ class _commentSellingPageState extends State<commentSellingPage> {
           style: TextStyle(fontSize: 12, height: 1.2, letterSpacing: 1)),
     );
   }
-
 
   Padding _main_buton(
     String title,
@@ -1203,7 +1193,7 @@ class _commentSellingPageState extends State<commentSellingPage> {
   Widget buildIndicator() => AnimatedSmoothIndicator(
       activeIndex: activeState, count: imageListt.length);
 
-       _buildExpandableContent(
+  _buildExpandableContent(
       basicclass wgtveriable, BuildContext context, String title) {
     List<Widget> columnContent = [];
     List screen = [];
@@ -1262,8 +1252,6 @@ class _commentSellingPageState extends State<commentSellingPage> {
       facebookPage(),
       mobileAppPage(),
       WebsitePage(),
-
-
     ]
         // Icons.motorcycle,
         ),
@@ -1275,11 +1263,10 @@ class _commentSellingPageState extends State<commentSellingPage> {
     ],
         // Icons.motorcycle,
         screenName: [
-        womenSellingPage(),
-        directSellingPage(),
-
-        sportMerchandisePage(),
-        homeDecorPage(),
+          womenSellingPage(),
+          directSellingPage(),
+          sportMerchandisePage(),
+          homeDecorPage(),
         ]),
 
     basicclass('Learn', [
@@ -1291,15 +1278,13 @@ class _commentSellingPageState extends State<commentSellingPage> {
     ],
         // Icons.motorcycle,
         screenName: [
-         pricingPage(),
-         getDemoPage(),
-         webinarGuidPage(),
-         ebookGuidPagePage(),
-         insightBlogPage(),
+          pricingPage(),
+          getDemoPage(),
+          webinarGuidPage(),
+          ebookGuidPagePage(),
+          insightBlogPage(),
         ]),
   ];
-
-
 }
 
 void setState(Null Function() param0) {}
